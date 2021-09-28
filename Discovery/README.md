@@ -23,6 +23,7 @@
 ## Folder Contents
 - DiscoveryMeeting.png - screenshot of the our discovery meeting Zoom call
 - FollowupQuestions.md - a list of followup questions to refine the software requirements
+- Minutes.md - record of our discovery meeting, what was discussed and who attended
 
 ## Meeting Participants
 - All capstone members
