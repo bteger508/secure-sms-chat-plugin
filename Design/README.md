@@ -1,3 +1,3 @@
 # Design
 
-Design documents here... Explain each folder/file in this readme file.
+- resources.md - contains a list of links/resources consulted to design the chat system
