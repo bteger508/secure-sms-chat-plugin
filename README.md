@@ -22,6 +22,7 @@ Accutech
 
 ## **Links**
 
+- [Iteration 1 Features](https://github.com/bteger508/secure-sms-chat-plugin/projects/1)
 - [Project description](ProjectDescription.md)
 - [Team meeting minutes](MeetingMinutes/Team)
 - [Mentor meeting minutes](MeetingMinutes/Mentor)
