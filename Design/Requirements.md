@@ -11,17 +11,17 @@
 - FR4 - The web application will send an API key and encrypted passcode to the encryption service to authenticate the client's and bank representative's accounts. 
   - Priority: Medium
   - Relates to BR1
+- FR5 - The server will store all text messages and their metadata in a relational database.
+  - Priority: Medium
+  - Relates to BR1
 
 # Nonfunctional Requirements
 - NR1 - The messages will be sent via SMS
   - Priority: High
   - Relates to BR2
-- NR2 - The messages will be 
-  - Priority: Medium
-  - Relates to BR1
-- NR3 - The system will define an API that interfaces with Accutech's other software products. 
-  - Priority: Medium 
+- NR2 - The system will adhere to REST API standards
+  - Priority: High 
   - Relates to BR2
-- NR4 - The web application UI will be responsive to the size of the window, supporting full screen and half screen on desktop computers, and full screen on smart phones and tablets. 
+- NR3 - The web application UI will be responsive to the size of the window, supporting full screen and half screen on desktop computers, and full screen on smart phones and tablets. 
   - Priority: Low
   - Relates to BR2
