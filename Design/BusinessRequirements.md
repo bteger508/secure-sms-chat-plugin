@@ -1,6 +1,6 @@
 # Business Requirements
 
-## BR1 Provide a communication channel between banks and their clients such that both parties are confident that their communication cannot be interfered with or intercepted. 
+## BR1 Allow banks and their clients to communicate confidentially.
 Accutech wants a secure communication line between banks and their clients because this communication contains sensitive financial information. Clients need to know that their credentials and personal information will truly be sent to their bank representative, while banks need confidence that their messages are truly sent to the client, not an impersonator. Accutech hopes to create a communication channel that protects against impersonation attacks, giving banks and clients confidence in the confidentiality and integrity of the messages sent.
 
 ## BR2 Improve relationships with banks' middle aged clients by adopting a modern communication strategy.
