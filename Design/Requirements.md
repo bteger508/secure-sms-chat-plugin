@@ -1,5 +1,5 @@
 # Functional Requirements
-- FR1 - The banks and their clients will compose messages, which contain the text message body, the sender's identity and a timestamp for the message.
+- FR1 - The banks and their clients will compose messages, which contain the message body, the sender's identity and a timestamp for the message.
   - Priority: High
   - Relates to BR2
 - FR2 - The banks and their clients will send the messages they compose.
@@ -11,15 +11,30 @@
 - FR4 - The web application will send an API key and encrypted passcode to the encryption service to authenticate the client's and bank representative's accounts. 
   - Priority: Medium
   - Relates to BR1
-- FR5 - The server will store all text messages and their metadata in a relational database.
+- FR5 - The server will store all messages and their metadata in a relational database.
+  - Priority: Medium
+  - Relates to BR1
+- FR6 - The system will only allow messages to be viewed by the intended recipient.
+  - Priority: Medium
+  - Relates to BR1
+- FR7 - The system will authenticate users before they can send or view messages.
+  - Priority: Medium
+  - Relates to BR1 
+- FR8 - The system will only allow message to be sent from a Cheetah account to an Accunet account or vice versa. 
+  - Priority: Medium
+  - Relates to BR1 
+- FR9 - The system will send a non-confidential SMS message to notify an accunet user each time the user recieves a message.
+  - Priority: Medium
+  - Relates to BR2
+- FR10 - The Cheeta UI will have an admin view that controls access to conversations
   - Priority: Medium
   - Relates to BR1
 
 # Nonfunctional Requirements
-- NR1 - The messages will be sent via SMS
-  - Priority: High
+- NR1 - The system will adhere to REST API standards
+  - Priority: High 
   - Relates to BR2
-- NR2 - The system will adhere to REST API standards
+- NR2 - The system should be able to operate as an independent application, keeping track of all of its own data and relationships, but be extensible so that data and relationships can be determined by outside systems.
   - Priority: High 
   - Relates to BR2
 - NR3 - The web application UI will be responsive to the size of the window, supporting full screen and half screen on desktop computers, and full screen on smart phones and tablets. 
