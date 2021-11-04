@@ -1,0 +1,32 @@
+Mentor Meeting on 11/04/2021
+Meeting Start Time
+2021/11/04/1:30PM
+
+Meeting End Time
+2021/10/04/2:00PM
+
+Location/Medium
+Zoom
+
+Present
+Nicole, Ben, Kade
+
+Minute Recorder
+Nicole
+
+Topics Discussed
+For any project the normal way is to have a configuration file that has key values pairs, server url, local host, port #. Once deployed on production the url will be changed to be accesible. 
+Configuration["ServerUrl"] 
+What we have to worry about vs what they have to worry about 
+
+
+Things Clarified
+Chooses random port: open solution explorer, launchsettings.json, line 24 (applicationURL), run through Docker 
+https://stackoverflow.com/questions/46940710/getting-value-from-appsettings-json-in-net-core
+Clear rode map with estimates, how long it will take etc. 
+Next iteration: seperate vue for frontend, implementing database to store messages, message specific people 
+Keep in mind: Product needs will always change
+Abstracting it (owner of chat, client) 
+manage accounts, have accounts
+
+Customer/Owner (dont worry about manually creating types) Cheetah will handle who can message who 
