@@ -40,3 +40,8 @@
 - NR3 - The web application UI will be responsive to the size of the window, supporting full screen and half screen on desktop computers, and full screen on smart phones and tablets. 
   - Priority: Low
   - Relates to BR2
+
+# Second Iteration 
+- JR1 - seperate vue for frontend
+- JR2 - implementing database to store messages
+- JR3 - message specific people 
