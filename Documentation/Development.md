@@ -22,32 +22,32 @@
 
  ## Set up Backend API
       
-clone project in terminal:
+clone project in terminal:  
 
-     -- git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git
+     -- git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git  
  
  To download the packages needed for the project  
-      -- cd into <local repository>/SignalRChat  
-      -- run the command `dotnet restore`  
+      -- cd into <local repository>/SignalRChat   
+      -- run the command `dotnet restore`   
   
-To configure the database:
-- In SQL Server Management Studio, copy the connection string for the 'master' database 
-  - Alternatively, you can create a new database and copy the connection string for it
-- In appsettings.json, replace the database connection string with the connection string for your database
-- from Visual Studio, go to the Tools tab of the toolbar. In the dropdown menu, go to Nuget Package Manager -> Package Manager Console.
-- Use the following commands in the package manager console to setup the database tables:
-  - Add-Migration initial-migration
-  - Update-Database
+To configure the database:  
+- In SQL Server Management Studio, copy the connection string for the 'master' database   
+  - Alternatively, you can create a new database and copy the connection string for it  
+- In appsettings.json, replace the database connection string with the connection string for your database  
+- from Visual Studio, go to the Tools tab of the toolbar. In the dropdown menu, go to Nuget Package Manager -> Package Manager Console.  
+- Use the following commands in the package manager console to setup the database tables:  
+  - Add-Migration initial-migration  
+  - Update-Database  
 - Check the build output to make sure the migration executed properly  
 - If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
-  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`  
-- Optional: verify in SQL Server Management Studio that the messages and conversations table got added to the database.
-- potential errors likely reference a path error:
+  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`   
+- Optional: verify in SQL Server Management Studio that the messages and conversations table got added to the database.  
+- potential errors likely reference a path error:  
   - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
   
-To run the API:
-      -- cd into <local repository>/SignalRChat  
-      -- run the command `dotnet run`
+To run the API:  
+      -- cd into <local repository>/SignalRChat   
+      -- run the command `dotnet run`  
  
 Once running a API skeleton wep page should be available at http://localhost:5000/
      
