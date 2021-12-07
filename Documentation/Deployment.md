@@ -32,7 +32,6 @@ To Configure the Database
 
 
 
-
   
 To run the API:  
       -- cd into <local repository>/SignalRChat   
@@ -56,3 +55,33 @@ If the console shows an error saying that Docker cannot mount files from a parti
 1. Go to Docker desktop and open settings. 
 2. Go to the Resources tab
 3. Add the path to the resources Docker needs. The error message should specify the path to the directory it needs. 
+  
+  
+##Setup Frontend
+1. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
+onto the server you plan to house the website.
+  - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
+  
+2. To download the packages needed for the project  
+      -- cd into <local repository>/testVue   
+      -- run the command `npm install`
+  
+    -if error about SignalR, run
+  
+      -- 'npm install @microsoft/signalr'
+ 
+3. Start with 
+  -npm run serve 
+  
+Configure with Backend
+1. First check the endpoints specified in './Startup.cs'
+    a. in ConfigureServices(), AddCors => AddPolicy => WithOrigins('url') specifies the accessible point and should match the port or server the frontend is running on. Similarly the variables underneath can configure the permissions further. Default at http://localhost:8080/
+    b. at the end of Configure(), UseEndpoints configures the backends accessible endpoints. {controller=Home} ist he port of server, and the mapped points are below, with '/chathub'.  Check to make sure your connection point matches, at Datahandler.js .withUrl("https://localhost:5001/chathub/" example: .withUrl("https://localhost:(port backend is running on)/chathub/"... example, backend is running on 5001 then ".withUrl("https://localhost:5001/chathub/"
+  
+2. start frontend with 
+        --'npm run serve'
+  
+  It will be found at http://localhost:8080/ and http://localhost:8080/chathub
+  
+Happy Coding!!
+
