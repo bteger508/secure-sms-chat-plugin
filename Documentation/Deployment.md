@@ -57,7 +57,10 @@ If the console shows an error saying that Docker cannot mount files from a parti
 3. Add the path to the resources Docker needs. The error message should specify the path to the directory it needs. 
   
   
-##Setup Frontend
+## Setup Frontend
+  
+  Make sure you have NPM and Vue-cli
+  
 1. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
 onto the server you plan to house the website.
   - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
@@ -69,6 +72,10 @@ onto the server you plan to house the website.
     -if error about SignalR, run
   
       -- 'npm install @microsoft/signalr'
+  
+   - and similarly with Vue-Cli
+      
+       -- npm install -g @vue/cli
  
 3. Start with 
   -npm run serve 
@@ -82,6 +89,15 @@ Configure with Backend
         --'npm run serve'
   
   It will be found at http://localhost:8080/ and http://localhost:8080/chathub
+  
+## Troubleshooting
+  
+  most errors will likely be package related. This can be fixed with either
+        --npm install
+  or if specific packages still arent available even after you will need to do it individually
+        -- example: npm install axios
+  
+  if this problem persists, make sure you are in the 'testVue' directory or where 'package.json' is stored
   
 Happy Coding!!
 
