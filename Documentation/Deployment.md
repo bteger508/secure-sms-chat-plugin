@@ -1,18 +1,44 @@
 # Deployment 
-## Instructions
+## Setup the Backend/API
 1. Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages.
-2. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
+  - `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
+2. To download the packages needed for the project  
+      -- cd into <local repository>/SignalRChat   
+      -- run the command `dotnet restore`
+
+To Configure the Database
+1. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
   - Use the default installation settings 
-  - Once the setup is complete, copy your connection string:  
+  - Once the setup is complete, copy your connection string for the master database
     Ex: "Server=localhost;Database=master;Trusted_Connection=True;MultipleActiveResultSets=True;"
-3. Open the SignalRChat/appsettings.json file and replace the connection string in the file with your connection string. 
-4. Save your changes.
-5. Run the project as a Docker container with the following steps:  
-  a. Make sure [docker desktop](https://www.docker.com/products/docker-desktop) is open and running.  
-  b. `cd` into the root directory of your local copy of the repository.  
-  c. Use the command `docker-compose up` from this directory to run the application.  
+2. Open the SignalRChat/appsettings.json file and replace the connection string in the file with your connection string. 
+3. Save your changes.
+4. from Visual Studio, go to the Tools tab of the toolbar. In the dropdown menu, go to Nuget Package Manager -> Package Manager Console.  
+5. Use the following commands in the package manager console to setup the database tables:  
+  - Add-Migration initial-migration  
+  - Update-Database  
+6. Check the build output to make sure the migration executed properly  
+  - If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
+  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`   
+  - Optional: verify in SQL Server Management Studio that the messages and conversations table got added to the database.  
+  - potential errors likely reference a path error:  
+  - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
+7. To run the API:
+     -- cd into <your local repo>/SignalRChat  
+     -- run the command `dotnet run`  
+8. To shut down the API, press CONTROL + C in your terminal (Works on Mac and Windows).  
+      
+
+
+
+
   
+To run the API:  
+      -- cd into <local repository>/SignalRChat   
+      -- run the command `dotnet run`  
+ 
+Once running a API skeleton wep page should be available at http://localhost:5000/
 ## Troubleshooting
 If the project does not run properly first try the following:
 1. Check to make sure that docker desktop is running properly
