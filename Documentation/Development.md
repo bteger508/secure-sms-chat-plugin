@@ -50,7 +50,20 @@ To run the API:
       -- run the command `dotnet run`  
  
 Once running a API skeleton wep page should be available at http://localhost:5000/
-     
+
+### Testing the Backend API  
+1. Run the API with  
+      -- cd into <local repository>/SignalRChat  
+      -- run the command `dotnet run`  
+2. Enter any name into the user and recipient input boxes and a message, but leave the conversation ID blank (the system will automatically generate one)  
+3. Send the message into the chat  
+4. In SQL Management Studio, expand Databases -> System Databases -> master (or the db you created) -> Tables.  
+ - Right-click on the Messages table to verify that the message you sent on the web page got stored in the database. 
+ - Locate and copy the conversation Id for the message you sent.  
+5. From your web browser, enter the URL: http://localhost:5000/api/messages/{your_conversation_ID}
+ - Ex: http://localhost:5000/api/messages/1
+6. Verify that the server returns a JSON response with the data for the message you sent. 
+ 
 ## Set up Frontend Vue.js
 dubbed 'babyui' as it is the foundation for plug and play uis
     
