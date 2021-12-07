@@ -45,7 +45,10 @@ To configure the database:
 - potential errors likely reference a path error:
   - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
   
-     
+To run the API:
+      -- cd into <local repository>/SignalRChat  
+      -- run the command `dotnet run`
+ 
 Once running a API skeleton wep page should be available at http://localhost:5000/
      
 ## Set up Frontend Vue.js
