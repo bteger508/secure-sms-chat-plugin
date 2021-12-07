@@ -8,6 +8,7 @@
     - Make sure to save the connection string for the 'master' database
   - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15) (optional for testing and managing the database)
   - node.js
+  - vue-cli
   
   -- Visual Studio 2022 is preferred as an IDE on a Windows operating system, but is possible without. (further iterations will ensure an easier development environment)
  
