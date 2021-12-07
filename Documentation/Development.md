@@ -43,7 +43,8 @@ To configure the database:
   `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`   
 - Optional: verify in SQL Server Management Studio that the messages and conversations table got added to the database.  
 - potential errors likely reference a path error:  
-  - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
+  - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct
+  - in Visual Studio another thing to check is the configuration of the Connected Services accessed either at the top of the project directory or 'Project' of the toolbar and select 'Manage connected services'
   
 To run the API:  
       -- cd into <local repository>/SignalRChat   
@@ -64,23 +65,52 @@ Once running a API skeleton wep page should be available at http://localhost:500
  - Ex: http://localhost:5000/api/messages/1
 6. Verify that the server returns a JSON response with the data for the message you sent. 
  
-## Set up Frontend Vue.js
-dubbed 'babyui' as it is the foundation for plug and play uis
-    
-checkout and fetch feature branch
-
-        git checkout -t feature/frontend-babyui
+## Set up Frontend Vue.jj
  
-then run
+  - this makes use of an external dummy api for datahandling only on the frontend, styling, and other frontend only functions. If you know you don't need the backend, at this stage it is mroe efficient to work without it to limit potential api errors when you only want to work on the fontend
+ 
+ Clone the respository 
+ 
+      -- git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git
+
+ ### Developing only frontend
+  
+ In the project directory run 
+ 
+        npm install
+ 
+  this will install necessary packages
+     -- if axios is undefined or throws an error you may need to do a separate install with 'NPM install axios'
+ 
+then from 'testVue' directory run
 
         npm run serve
         
-- from Visual Studio select 'Any CPU' in the Solution Platform and press run, or simply 'debug' on the menu bar, then select 'Start Debugging'
+- from Visual Studio you can select 'Any CPU' in the Solution Platform and press run, or simply 'debug' on the menu bar, then select 'Start Debugging'
 - potential errors likely involve node.js and node-Packages, or missing dependencies. Run in terminal:
   - npm install
   - npm install vue
         
  Once running UI should be available at http://localhost:8080/
+ 
+ ### Developing with the backend
+ 
+    --connection is established with the api. For developing with api calls and more dynamic data handling
+ 
+ Make sure you check out the 'adding-signalR' branch
+ 
+ In the project directory run 
+ 
+       npm install
+ 
+   again this will install necessary packages
+      -- it is very likley 'SignalR' will not be installed with this command, so you will need to install it with 'npm install @microsoft/signalr'
+ 
+ Make sure you have the api running, you can access the UI at http://localhost:8080/ or http://localhost:8080/chathub
+ In the API the open port should be http://localhost:5001 + '/chathub' and on the fontend it will correspondingly be http://localhost:5001/chathub
+ 
+ The api SignalR Hub is currently accessed in 'Datahandler.js' with AccessHub. If you hever have an permissions or client ID error, make sure the 'HubConnectionBuilder()' is being called.
+ There is a console log for successful connection to the API.
  
  
  Happy Coding!
