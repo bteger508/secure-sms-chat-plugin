@@ -81,23 +81,23 @@ onto the server you plan to house the website.
   -npm run serve 
   
 Configure with Backend
-1. First check the endpoints specified in './Startup.cs'
-    a. in ConfigureServices(), AddCors => AddPolicy => WithOrigins('url') specifies the accessible point and should match the port or server the frontend is running on. Similarly the variables underneath can configure the permissions further. Default at http://localhost:8080/
-    b. at the end of Configure(), UseEndpoints configures the backends accessible endpoints. {controller=Home} ist he port of server, and the mapped points are below, with '/chathub'.  Check to make sure your connection point matches, at Datahandler.js .withUrl("https://localhost:5001/chathub/" example: .withUrl("https://localhost:(port backend is running on)/chathub/"... example, backend is running on 5001 then ".withUrl("https://localhost:5001/chathub/"
+1. First check the endpoints specified in './Startup.cs'  
+    a. in ConfigureServices(), AddCors => AddPolicy => WithOrigins('url') specifies the accessible point and should match the port or server the frontend is running on.   Similarly the variables underneath can configure the permissions further. Default at http://localhost:8080/  
+    b. at the end of Configure(), UseEndpoints configures the backends accessible endpoints. {controller=Home} ist he port of server, and the mapped points are below, with '/chathub'.  Check to make sure your connection point matches, at Datahandler.js .withUrl("https://localhost:5001/chathub/" example: .withUrl("https://localhost:(port backend is running on)/chathub/"... example, backend is running on 5001 then ".withUrl("https://localhost:5001/chathub/"  
   
-2. start frontend with 
-        --'npm run serve'
+2. start frontend with  
+        --'npm run serve'  
   
-  It will be found at http://localhost:8080/ and http://localhost:8080/chathub
+  It will be found at http://localhost:8080/ and http://localhost:8080/chathub  
   
-## Troubleshooting
+## Troubleshooting  
   
-  most errors will likely be package related. This can be fixed with either
-        --npm install
-  or if specific packages still arent available even after you will need to do it individually
-        -- example: npm install axios
+  most errors will likely be package related. This can be fixed with either  
+        --npm install  
+  or if specific packages still arent available even after you will need to do it individually  
+        -- example: npm install axios  
   
-  if this problem persists, make sure you are in the 'testVue' directory or where 'package.json' is stored
+  if this problem persists, make sure you are in the 'testVue' directory or where 'package.json' is stored  
   
-Happy Coding!!
+Happy Coding!!  
 
