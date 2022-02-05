@@ -1,3 +1,4 @@
+To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
 1. Make sure there are no previous migrations in the Migrations subfolder (SignalRChat/Migrations). 
     - If there is a Migrations folder, delete the folder. 
 2. In Powershell, navigate to the SignalRChat folder, and run `dotnet clean` and `dotnet restore`
