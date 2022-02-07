@@ -1,5 +1,6 @@
-# Deployment 
+# Deployment Documentation
 ## Setup the Backend/API
+To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
 1. Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages.
   - `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
@@ -7,7 +8,10 @@ onto the server you plan to use for sending and storing messages.
       -- cd into <local repository>/SignalRChat   
       -- run the command `dotnet restore`
 
-To Configure the Database
+### Configure SQL server with Docker:
+  [[Add instructions here]]
+  
+### Configure SQL server manually:
 1. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
   - Use the default installation settings 
   - Once the setup is complete, copy your connection string for the master database
