@@ -1,1 +1,36 @@
+Client Meeting on 02-07-2022
+Meeting Start Time
+2022/02/07/2:00PM
 
+Meeting End Time
+2022/02/07/3:00PM
+
+Location/Medium
+Zoom
+
+Present
+Trey, Scott, Mercedes, Nicole, Ethan, Ben
+
+Minute Recorder
+Nicole
+
+Topics Discussed
+Presented iteration 3 final product
+User Documentation (3rd Iteration)
+Deployment Documentation (3rd Iteration)
+Development Documentation (3rd Iteration)
+4th Iteration Features
+
+Feedback from client:
+Features for iteration 3 sound good
+Need endpoints
+AddNewtonsofJson();
+Think about creating new solutions and move our stuff over to it
+
+Look at https://www.livechat.com/ and https://developers.livechat.com/?_ga=2.8721269.1952473860.1644263785-839495645.1644263785
+for referance 
+
+
+Things Clarified
+Gave us a lot of tips for code structure 
+REST comapred to CRUD resource in Confluence (written by Trey)
