@@ -1,16 +1,23 @@
 # Deployment Documentation
-## Setup the API
 
-### Initial Instructions
+## Initial Instructions
 To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
 1. Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages.
       -- `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
 2. To download the packages needed for the project  
       -- cd into <local repository>/SignalRChat   
-      -- run the command `dotnet restore`.  
+      -- run the command `dotnet restore`.
+3. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
+onto the server you plan to house the website.
+  - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
+    
+4. Make sure you have NPM and Vue-cli installed
 
-### Running the API with Docker
+
+## Docker Instructions
+### Setting up the API (First Time Only)
+This only needs to happen the first time you build the freshly cloned project
 1. Make sure there are no previous migrations in the Migrations subfolder (SignalRChat/Migrations). 
     - If there is a Migrations folder, delete the folder. 
 2. In Powershell, navigate to the SignalRChat folder, and run `dotnet clean` and `dotnet restore`
@@ -30,6 +37,14 @@ onto the server you plan to use for sending and storing messages.
 10.  In powershell, In the root of the repository: `docker compose up --build`
     - If the build fails, run  `docker compose up --build` again
 
+### Running the Project
+1. `cd` into bsu.securechat-frontend/BasicVue directory
+2. From your terminal run `docker build . -t <container name>`
+    -- We typically name the container 'frontend'
+3. From your terminal run `docker run -p 8080:8080 frontend`
+4. `cd` into the bsu.secure-communications directory
+5. From the terminal run `docker compose up`
+      
   
 ### Running the API with dotnet SDK:
 1. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
@@ -80,7 +95,7 @@ If `dotnet restore` throws a "Data at the root level is invalid" error:
   
   
   
-## Setup Frontend
+## Setup Frontend without Docker
   
   Make sure you have NPM and Vue-cli installed
   
