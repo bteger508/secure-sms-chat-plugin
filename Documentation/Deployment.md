@@ -1,15 +1,16 @@
 # Deployment Documentation
-## Setup the Backend/API
+## Setup the API
+
+### Initial Instructions
 To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
 1. Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages.
-  - `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
+      -- `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
 2. To download the packages needed for the project  
       -- cd into <local repository>/SignalRChat   
-      -- run the command `dotnet restore`
+      -- run the command `dotnet restore`.  
 
-### Configure SQL server with Docker:
-To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
+### Running the API with Docker
 1. Make sure there are no previous migrations in the Migrations subfolder (SignalRChat/Migrations). 
     - If there is a Migrations folder, delete the folder. 
 2. In Powershell, navigate to the SignalRChat folder, and run `dotnet clean` and `dotnet restore`
@@ -30,7 +31,7 @@ To setup the API, you will need to install the [dotnet 6 sdk](https://docs.micro
     - If the build fails, run  `docker compose up --build` again
 
   
-### Configure SQL server manually:
+### Running the API with dotnet SDK:
 1. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
   - Use the default installation settings 
   - Once the setup is complete, copy your connection string for the master database
@@ -39,8 +40,8 @@ To setup the API, you will need to install the [dotnet 6 sdk](https://docs.micro
 3. Save your changes.
 4. from Visual Studio, go to the Tools tab of the toolbar. In the dropdown menu, go to Nuget Package Manager -> Package Manager Console.  
 5. Use the following commands in the package manager console to setup the database tables:  
-  - Add-Migration initial-migration  
-  - Update-Database  
+  - `Add-Migration initial-migration`  
+  - `Update-Database`  
 6. Check the build output to make sure the migration executed properly  
   - If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
   `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`   
@@ -48,20 +49,13 @@ To setup the API, you will need to install the [dotnet 6 sdk](https://docs.micro
   - potential errors likely reference a path error:  
   - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
 7. To run the API:
-     -- cd into <your local repo>/SignalRChat  
+     -- `cd` into <your local repo>/SignalRChat  
      -- run the command `dotnet run`  
 8. To shut down the API, press CONTROL + C in your terminal (Works on Mac and Windows).  
-      
-
-
-
+     
+  Once running a API skeleton wep page should be available at http://localhost:5000/
   
-To run the API:  
-      -- cd into <local repository>/SignalRChat   
-      -- run the command `dotnet run`  
- 
-Once running a API skeleton wep page should be available at http://localhost:5000/
-## Troubleshooting
+### Troubleshooting the API
 If the project does not run properly first try the following:
 1. Check to make sure that docker desktop is running properly
 2. If you are running the application from the command line, check to make sure you are in the root directory of the repository. 
@@ -78,18 +72,24 @@ If the console shows an error saying that Docker cannot mount files from a parti
 1. Go to Docker desktop and open settings. 
 2. Go to the Resources tab
 3. Add the path to the resources Docker needs. The error message should specify the path to the directory it needs. 
+
+If `dotnet restore` throws a "Data at the root level is invalid" error:
+  - Check to make sure there are no obj or bin subddirectories in the SignalRChat directory. If there are, delete them. 
+  - Clear the nuget caches with `nuget locals all -clear`
+  - Try again to restore the nuget packages
+  
   
   
 ## Setup Frontend
   
-  Make sure you have NPM and Vue-cli
+  Make sure you have NPM and Vue-cli installed
   
 1. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
 onto the server you plan to house the website.
   - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
   
 2. To download the packages needed for the project  
-      -- cd into <local repository>/testVue   
+      -- cd into <local repository>/BasicVue   
       -- run the command `npm install`
   
     -if error about SignalR, run
@@ -100,8 +100,8 @@ onto the server you plan to house the website.
       
        -- npm install -g @vue/cli
  
-3. Start with 
-  -npm run serve 
+3. Start the server with 
+    -- `npm run serve`
   
 Configure with Backend
 1. First check the endpoints specified in './Startup.cs'  
@@ -111,7 +111,7 @@ Configure with Backend
 2. start frontend with  
         --'npm run serve'  
   
-  It will be found at http://localhost:8080/ and http://localhost:8080/chathub  
+  The url for the frontend is http://localhost:8080/
   
 ## Troubleshooting  
   
