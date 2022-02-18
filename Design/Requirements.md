@@ -29,6 +29,13 @@
 - FR10 - The Cheeta UI will have an admin view that controls access to conversations
   - Priority: Medium
   - Relates to BR1
+- FR11 - User accounts will only be visible to the account owner and the admin account of the corresponding bank. 
+- FR12 - Bank employees can access an admin account that manages all of the message, conversation, and account data linked to the institution.
+- FR13 - Accutech administrators can manage all message, conversation and account data in the database.
+- FR14 - Bank clients can create an account with their email to send questions to their bank.
+- FR15 - The database will be encrypted to protect the data
+- FR16 - The bank admin account can view a table of open conversations, reply to the sender and resolve the conversation.
+- FR17 - Bank client accounts can view a list of open conversations
 
 # Nonfunctional Requirements
 - NR1 - The system will adhere to REST API standards
