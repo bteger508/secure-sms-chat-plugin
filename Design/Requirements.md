@@ -20,22 +20,24 @@
 - FR7 - The system will authenticate users before they can send or view messages.
   - Priority: Medium
   - Relates to BR1 
-- FR8 - The system will only allow message to be sent from a Cheetah account to an Accunet account or vice versa. 
+- FR8 - The system will only allow messages to be sent from a Cheetah account to an Accunet account or vice versa. 
   - Priority: Medium
   - Relates to BR1 
 - FR9 - The system will send a non-confidential SMS message to notify an accunet user each time the user recieves a message.
   - Priority: Medium
   - Relates to BR2
-- FR10 - The Cheeta UI will have an admin view that controls access to conversations
+- FR10 - Each financial institution will have a unique admin account to login to the chat system. 
+- FR11 -  Each metaclient will be able to create an account 
+- FR12 - The SecureChat UI for the admin accounts (for financial institutions using Cheetah) will allow employees to view/manage a list of open conversations, respond to metaclient inquiries, and view/manage all user accounts tied to the financial institution.
   - Priority: Medium
   - Relates to BR1
-- FR11 - User accounts will only be visible to the account owner and the admin account of the corresponding bank. 
-- FR12 - Bank employees can access an admin account that manages all of the message, conversation, and account data linked to the institution.
-- FR13 - Accutech administrators can manage all message, conversation and account data in the database.
-- FR14 - Bank clients can create an account with their email to send questions to their bank.
-- FR15 - The database will be encrypted to protect the data
-- FR16 - The bank admin account can view a table of open conversations, reply to the sender and resolve the conversation.
-- FR17 - Bank client accounts can view a list of open conversations
+- FR13 - Metaclient accounts will only be visible to the account owner and the admin account of the corresponding financial institution. 
+- FR14 - Bank employees can access an admin account that manages all of the message, conversation, and account data linked to the institution.
+- FR15 - Accutech administrators can manage all message, conversation and account data in the database.
+- FR16 - Bank clients can create an account with their email to send questions to their bank.
+- FR17 - The database will be encrypted to protect the data
+- FR18 - The bank admin account can view a table of open conversations, reply to the sender and resolve the conversation.
+- FR19 - Bank client accounts can view a list of open conversations
 
 # Nonfunctional Requirements
 - NR1 - The system will adhere to REST API standards
