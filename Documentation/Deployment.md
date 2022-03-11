@@ -1,141 +1,98 @@
 # Deployment Documentation
 
 ## Initial Instructions
-To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
-1. Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
-onto the server you plan to use for sending and storing messages.
-      -- `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`  
-2. To download the packages needed for the project  
-      -- cd into <local repository>/SignalRChat   
-      -- run the command `dotnet restore`.
-3. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
-onto the server you plan to house the website.
-  - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
+To setup the API, you will need to install the following:
+- [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60)
+- [Docker](https://www.docker.com/get-started)
+- [NPM]()
+- [Vue-cli]()
+
+Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
+onto the server you plan to use for sending and storing messages: `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`
     
-4. Make sure you have NPM and Vue-cli installed
 
 
-## Docker Instructions
-### Setting up the API (First Time Only)
-This only needs to happen the first time you build the freshly cloned project
-1. Make sure there are no previous migrations in the Migrations subfolder (SignalRChat/Migrations). 
-    - If there is a Migrations folder, delete the folder. 
-2. In Powershell, navigate to the SignalRChat folder, and run `dotnet clean` and `dotnet restore`
-3. Change the SQL connection string in appsettings.json from "server=sql; ..." to "server=localhost,1433; ..."
-4. From visual studio, open the package manager
-    - Add a new migration with `Add-Migration initial`
-5. In Powershell, In the root of the repository: `docker compose up --build`
-    - If the build fails, run  `docker compose up --build` again
-6. From visual studio, open the package manager
-    - Update the docker MSSQL database with `Update-Database`
-7. From Docker Desktop, launch SQL Pad in your browser:
+## Deploying with Docker
+1. `cd` into the root of your repository and `docker compose up --build`
+    - Chat Application: http://localhost:8080
+    - API Swaggar Page: http://localhost:5001
+    - SQL Pad: http://localhost:3000
+2. Optional: From Docker Desktop, launch SQL Pad in your browser:
     - username is ethanmhollan@gmail.com (yes, no 'd' in holland)
     - password is Password1!
     - Make sure the conversations and messages tables were added to the database
-8. Close all running containers
-9. Change the SQL connection string in appsettings.json from "server=localhost,1433; ..." to "server=sql; ..."
-10.  In powershell, In the root of the repository: `docker compose up --build`
-    - If the build fails, run  `docker compose up --build` again
 
-### Running the Project
-1. `cd` into bsu.securechat-frontend/BasicVue directory
-2. From your terminal run `docker build . -t <container name>`
-    -- We typically name the container 'frontend'
-3. From your terminal run `docker run -p 8080:8080 frontend`
-4. `cd` into the bsu.secure-communications directory
-5. From the terminal run `docker compose up`
-      
-  
-### Running the API with dotnet SDK:
-1. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
-  - Use the default installation settings 
-  - Once the setup is complete, copy your connection string for the master database
-    Ex: "Server=localhost;Database=master;Trusted_Connection=True;MultipleActiveResultSets=True;"
-2. Open the SignalRChat/appsettings.json file and replace the connection string in the file with your connection string. 
-3. Save your changes.
-4. from Visual Studio, go to the Tools tab of the toolbar. In the dropdown menu, go to Nuget Package Manager -> Package Manager Console.  
-5. Use the following commands in the package manager console to setup the database tables:  
-  - `Add-Migration initial-migration`  
-  - `Update-Database`  
-6. Check the build output to make sure the migration executed properly  
-  - If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
-  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`   
-  - Optional: verify in SQL Server Management Studio that the messages and conversations table got added to the database.  
-  - potential errors likely reference a path error:  
-  - make sure you are pointing to the correct file, calling from the correct directory, or type cases are correct  
-7. To run the API:
-     -- `cd` into <your local repo>/SignalRChat  
-     -- run the command `dotnet run`  
-8. To shut down the API, press CONTROL + C in your terminal (Works on Mac and Windows).  
-     
-  Once running a API skeleton wep page should be available at http://localhost:5000/
-  
-### Troubleshooting the API
+### Troubleshooting
 If the project does not run properly first try the following:
 1. Check to make sure that docker desktop is running properly
 2. If you are running the application from the command line, check to make sure you are in the root directory of the repository. 
-  - The directory should contain the docker-compose.yml file. 
+    - The directory should contain the docker-compose.yml file. 
 
 When you run docker-compose up for the first time, you may get the following error:  
 
         "System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date."
 If this occurs, run the following commands in the command line:
-- `dotnet dev-certs https --clean`
-- `dotnet dev-certs https -t`
+    - `dotnet dev-certs https --clean`
+    - `dotnet dev-certs https -t`
 
 If the console shows an error saying that Docker cannot mount files from a particular directory:
 1. Go to Docker desktop and open settings. 
 2. Go to the Resources tab
 3. Add the path to the resources Docker needs. The error message should specify the path to the directory it needs. 
 
-If `dotnet restore` throws a "Data at the root level is invalid" error:
-  - Check to make sure there are no obj or bin subddirectories in the SignalRChat directory. If there are, delete them. 
-  - Clear the nuget caches with `nuget locals all -clear`
-  - Try again to restore the nuget packages
   
-  
-  
-## Setup Frontend without Docker
-  
-  Make sure you have NPM and Vue-cli installed
-  
-1. Clone the [bsu.securechat-frontend](https://bitbucket.org/bteger508/bsu.securechat-frontend/src/adding-SignalR/)
-onto the server you plan to house the website.
-  - `git clone https://MYenLinT@bitbucket.org/bteger508/bsu.securechat-frontend.git`  
-  
-2. To download the packages needed for the project  
-      -- cd into <local repository>/BasicVue   
-      -- run the command `npm install`
-  
-    -if error about SignalR, run
+## Deploying Manually
+
+### API Deployment
+
+1. `cd` into bsu.secure-communications/SignalRChat and run `dotnet restore` to install packages
+2. Download and install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
+    - Use the default installation settings 
+    - Once the setup is complete, copy your connection string for the master database
+    Ex: "Server=localhost;Database=master;Trusted_Connection=True;MultipleActiveResultSets=True;"
+3. Optional: download SQL Management Studio to manage the API database. Configure a new connection with your connection string and credentials
+4. Open the SignalRChat/appsettings.json file and replace the connection string in the file with your connection string. Save your changes.
+5. From the bsu.secure-communications/SignalRChat directory, run `dotnet ef database update` 
+    - If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
+  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`. You can add this package with `dotnet add package Microsoft.EntityFrameworkCore.Tools`
+    - Optional: verify in SQL Server Management Studio that the conversations, messages, tenants, users, and userconversations tables got added to the database.
+6. To run the API, `cd` into bsu.secure-communications/SignalRChat and run the command `dotnet run`
+    - API Swaggar Page: http://localhost:5001
+7. To shut down the API, press CONTROL + C in your terminal (Works on Mac and Windows).  
+
+### Chat Application Deployment
+
+1. `cd` into bsu.secure-communications/BasicVue
+2. `npm install` to download all dependencies
+    - if error about SignalR, run
   
       -- 'npm install @microsoft/signalr'
   
-   - and similarly with Vue-Cli
+    - and similarly with Vue-Cli
       
-       -- npm install -g @vue/cli
- 
-3. Start the server with 
-    -- `npm run serve`
-  
-Configure with Backend
-1. First check the endpoints specified in './Startup.cs'  
-    a. in ConfigureServices(), AddCors => AddPolicy => WithOrigins('url') specifies the accessible point and should match the port or server the frontend is running on.   Similarly the variables underneath can configure the permissions further. Default at http://localhost:8080/  
-    b. at the end of Configure(), UseEndpoints configures the backends accessible endpoints. {controller=Home} ist he port of server, and the mapped points are below, with '/chathub'.  Check to make sure your connection point matches, at Datahandler.js .withUrl("https://localhost:5001/chathub/" example: .withUrl("https://localhost:(port backend is running on)/chathub/"... example, backend is running on 5001 then ".withUrl("https://localhost:5001/chathub/"  
-  
-2. start frontend with  
-        --'npm run serve'  
-  
-  The url for the frontend is http://localhost:8080/
-  
-## Troubleshooting  
-  
-  most errors will likely be package related. This can be fixed with either  
-        --npm install  
-  or if specific packages still arent available even after you will need to do it individually  
-        -- example: npm install axios  
-  
-  if this problem persists, make sure you are in the 'testVue' directory or where 'package.json' is stored  
-  
-Happy Coding!!  
+      -- npm install -g @vue/cli
+     
+3. `npm run serve` to run the web application: http://localhost:8080
 
+
+### Troubleshooting 
+
+#### API
+
+Sometimes the API will fail due to a few common issues:
+
+1. Caches not being cleared properly: `Data at the root level is invalid`. To fix this, `cd` into bsu.secure-communications/SignalRChat and run `dotnet clean` and `dotnet restore`
+2. API cannot connect to SQL Server. Check to make sure that your connection string is correct, and that SQL Server is running.
+    - For further information, consult the official documentation for [SQL Server](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15)
+3. Issues with Database migrations. Sometimes migrations or database updates will fail. If this happens, do the following. 
+    a. Delete the migrations directory in bsu.securecommunications/SignalRChat
+    b. `cd` into bsu.securecommunications/SignalRChat and run `dotnet ef migrations add initial --msbuildprojectextensionspath obj/local` and `dotnet ef database update`.
+    c. If you get an error saying "Data in the root level is invalid" check that SignalRChat.csproj contains the following XML tag:  
+  `<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">`. You can add this package with `dotnet add package Microsoft.EntityFrameworkCore.Tools`
+
+#### Chat Application
+For the frontend, most errors will likely be package related. This can be fixed with either  
+        -- `npm install`  
+or if specific packages don't get installed properly, you will need to install them individually  
+        -- `example: npm install axios`
+if this problem persists, make sure you are in the 'BasicVue' directory where the 'package.json' is stored.
