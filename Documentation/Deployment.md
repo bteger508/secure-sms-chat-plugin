@@ -1,7 +1,7 @@
 # Deployment Documentation
 
 ## Initial Instructions
-To setup the API, you will need to install the following:
+To deploy the code, you will need to install the following:
 - [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60)
 - [Docker](https://www.docker.com/get-started)
 - [NPM]()
