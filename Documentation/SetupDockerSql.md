@@ -1,3 +1,5 @@
+# Use this Document for Reference if the Seeding Script Fails on Build
+
 To setup the API, you will need to install the [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60) and [Docker](https://www.docker.com/get-started)
 1. Make sure there are no previous migrations in the Migrations subfolder (SignalRChat/Migrations). 
     - If there is a Migrations folder, delete the folder. 
