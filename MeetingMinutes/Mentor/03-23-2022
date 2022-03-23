@@ -1,0 +1,46 @@
+Mentor Meeting on 03/23/2022
+Meeting Start Time
+2022/23/08/3:00PM
+
+Meeting End Time
+2022/03/08/3:30PM
+
+Location/Medium
+Zoom
+
+Present
+Kade, Nicole, Sadie, Ethan
+
+Minute Recorder
+Nicole
+
+Topics Discussed
+Talked through encrypting database and gave us this link: https://emrekizildas.medium.com/encrypt-your-database-columns-with-entityframework-1f129b19bdf8
+
+Do we need to do anything specific to hand the project over
+
+Sendgrid
+
+Sypress
+
+sms and email notification
+
+Documentation feedback
+
+
+Things Clarified
+Encrypting the volume won't be to bad but then you have to get the seeding in which can be difficult
+There is a way to add seeds to a formal migration
+efcore seed data, loof got migration building that has c data shape object
+
+We should copy our documentation over to bitbucket
+
+They are currently developing a style guide for Vue projects so we should just find an official vue style guide to use
+
+use sengrid for sms alert
+
+don't put sypress in docker container instead run from host machine
+
+be cautios of email and sms notification because it will take longer than we think
+
+Our documentation is looking very good and will be helpful when we turn the project over
