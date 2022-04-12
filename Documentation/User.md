@@ -28,10 +28,12 @@ In the Admin Panel you can see a chart of the tenants information. This informat
 
 After the client logs in they will be brough the the Accunet panel. This panel allows the client to open a live chat, start a new conversation, and sign out. 
 
-<img src="empty-accunetpanel.png"></img>
+<img src="assets/empty-accunetpanel.png"></img>
 
 ### User Panel
 
-<img src="user-panel.png"></img>
+<img src="assets/user-panel.png"></img>
+
+
 
 
