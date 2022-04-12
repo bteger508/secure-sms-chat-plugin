@@ -12,6 +12,12 @@ After registering you are brought to the login page. Here you input your Usernam
 
 <img src="assets/login.png"></img>
 
+### The Admin Panel
+
+In the Admin Panel you can see a chart of the tenants information. This information includes their Tenant Id's, name of their organization (Capital One) for example, and the type (bank) for example. In this panel you can edit the chart, delete a tenant, add a new tenant, and sign out. 
+
+<img src="assets/admin-panel.png"></img>
+
 ### The Accunet Chat Window
 
 Once logged in, trust owners can view a mostly empty window with the option to create a new conversation. Clicking 'Create New Conversation' takes the user to the chat window. The first input field is the subject for the conversation. Once the user enters a subject for the conversation, they can send a message to their trust officer. If you press back, you can see a list of conversations you created. Clicking on any of these will take you to the chat for that conversation.
@@ -26,11 +32,6 @@ In this window the trust officers can respond to incoming messages from trust ow
 
 <img src="assets/cheetah-chat.png"></img>
 
-### The Admin Panel
-
-In the Admin Panel you can see a chart of the tenants information. This information includes their Tenant Id's, name of their organization (Capital One) for example, and the type (bank) for example. In this panel you can edit the chart, delete a tenant, add a new tenant, and sign out. 
-
-<img src="assets/admin-panel.png"></img>
 
 ### The Accunet Panel 
 
