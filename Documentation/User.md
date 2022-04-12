@@ -18,3 +18,8 @@ In this window the trust officers can respond to incoming messages. These messag
 
 <img src="assets/cheetah-chat.png"></img>
 
+### The Admin Panel
+
+In the Admin Panel you can see a chart of the tenants information. This information includes their Tenant Id's, name of their organization (Capital One) for example, and the type (bank) for example. In this panel you can edit the chart, delete a tenant, add a new tenant, and sign out. 
+
+<img src="assets/empty-accunetpanel.png"></img>
