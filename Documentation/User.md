@@ -16,7 +16,9 @@ After registering you are brought to the login page. Here you input your Usernam
 
 Once logged in, trust owners can view a mostly empty window with the option to create a new conversation. Clicking 'Create New Conversation' takes the user to the chat window. The first input field is the subject for the conversation. Once the user enters a subject for the conversation, they can send a message to their trust officer. If you press back, you can see a list of conversations you created. Clicking on any of these will take you to the chat for that conversation.
 
+<img src="assets/accunet-chat.png"></img>
 
+<img src="assets/accunet-subject-field.png"></img>
 
 ### The Cheetah Chat Window
 
