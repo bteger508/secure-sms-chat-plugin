@@ -8,6 +8,8 @@ To register for an account as a trust owner, navigate to http://localhost:8080/R
 
 ### The Login Page
 
+After registering you are brought to the login page. Here you input your Username and Password to continue. 
+
 <img src="assets/login.png"></img>
 
 ### The Accunet Chat Window
