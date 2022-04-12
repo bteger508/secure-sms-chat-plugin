@@ -79,7 +79,8 @@ Secure sms chat plugin uses xunit for unit testing the API and cypress for testi
     cd BasicVue
     npm run cypress:open
 
-To run all xunit tests for the API, make sure you are in the root of the repository, and run the following:
+To run all xunit tests for the API, make sure you are in the root of the repository, and run the following:  
+
     dotnet test
 
 
