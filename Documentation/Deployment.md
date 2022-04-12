@@ -9,7 +9,23 @@ To deploy the code, you will need to install the following:
 
 Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages: `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`
+
+## Adjusting Appsettings
+
+Before you can deploy the application, you will need to replace the API keys stored in appsettings.json and appsettings.Development.json with your own keys. 
+
+API Keys Needed:
+1. Twilio
+2. SendGrid
+
+### Registering for a Twilio account
+
+You can register for a twilio account at https://www.twilio.com/. When you create an account the website gives you an API Key and Account Sid. You will also need to purchase a phone number through twilio. The documentation for this on the website is excellent. In appsettings.json and appsettings.Development.json, replace the values in the "TwilioAccountDetails" object with your account Sid, API key, and twilio phone number. 
+
+<how to register for a sendgrid key>
     
+
+
 
 
 ## Deploying with Docker
