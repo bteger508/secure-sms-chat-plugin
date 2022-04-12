@@ -32,6 +32,8 @@ After the client logs in they will be brought to the Accunet panel. This panel a
 
 ### The Cheetah Panel
 
+The Cheetah Panel shows the trust officers the open conversations. In this panel the trust officers can see who created the conversation, the subject of the conversation, how many comments the conversation has, the date of the last comment, when the conversation was created, and if the conversation is closed or not and if so the date it was closed. There is also an edit button on this panel that allows you to close or delete a conversation. 
+
 <img src="assets/cheetah-panel.png"></img>
 
 ### The User Panel
