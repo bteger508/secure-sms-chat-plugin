@@ -71,6 +71,16 @@ The three main modules at the top level of the project are `BasicVue`, `SignalRC
 3. In the web browser's development console, check for the the `SignalR Connected` message. This indicates that the frontend successfully connected to the SignalR Hub. 
         
 Once running UI should be available at http://localhost:8080/
- 
- 
+
+## Testing
+
+Secure sms chat plugin uses xunit for unit testing the API and cypress for testing the GUI. To run cypress tests, open the repo in your terminal:
+
+    cd BasicVue
+    npm run cypress:open
+
+To run all xunit tests for the API, make sure you are in the root of the repository, and run the following:
+    dotnet test
+
+
 Happy Coding!
