@@ -72,6 +72,18 @@ The three main modules at the top level of the project are `BasicVue`, `SignalRC
         
 Once running UI should be available at http://localhost:8080/
 
+## Developing SMS and Email Features
+
+Before you can develop SMS or Email features for the application, you will need to replace the API keys stored in appsettings.json and appsettings.Development.json with your own keys. 
+
+API Keys Needed:
+1. Twilio
+2. SendGrid
+
+### Registering for a Twilio account
+
+You can register for a twilio account at https://www.twilio.com/. When you create an account the website gives you an API Key and Account Sid. You will also need to purchase a phone number through twilio. The documentation for this on the website is excellent. In appsettings.json and appsettings.Development.json, replace the values in the "TwilioAccountDetails" object with your account Sid, API key, and twilio phone number. 
+
 ## Testing
 
 Secure sms chat plugin uses xunit for unit testing the API and cypress for testing the GUI. To run cypress tests, open the repo in your terminal:
