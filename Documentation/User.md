@@ -16,5 +16,5 @@ Once logged in, trust owners can view a mostly empty window with the option to c
 
 In this window the trust officers can respond to incoming messages. These messages will have a time stamp, the clients name, and the subject of the question. This window offers the ability to go back and sign out. 
 
-<img scr="assets/cheetah-chat.png"></img>
+<img src="assets/cheetah-chat.png"></img>
 
