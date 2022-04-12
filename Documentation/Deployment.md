@@ -5,7 +5,7 @@ To deploy the code, you will need to install the following:
 - [dotnet 6 sdk](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60)
 - [Docker](https://www.docker.com/get-started)
 - [NPM]()
-- [Vue-cli]()
+- [Vue-cli]() (You will need to cd into /BasicVue in order to do so)
 
 Clone the [bsu.secure-communications repository](https://bitbucket.org/accutechdev/bsu.secure-communications/src/master/)
 onto the server you plan to use for sending and storing messages: `git clone git@bitbucket.org:accutechdev/bsu.secure-communications.git`
