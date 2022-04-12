@@ -24,8 +24,12 @@ You can register for a twilio account at https://www.twilio.com/. When you creat
 
 <how to register for a sendgrid key>
     
+### Registering for a SendGrid Account
 
-
+You can register for a SendGrid Account at [https://signup.sendgrid.com/](https://signup.sendgrid.com/). 
+After Signing up, navigate to "Settings" -> "Sender Authentication". Then set up a Single Sender. This Email address will be the address that all emails are sent from. 
+Go back to "Settings" then to "API Keys." Or alternatively to this [link](https://app.sendgrid.com/settings/api_keys). Name your API Key whatever you would like. Select "Restricted Access" for API Key Permissions and scroll down to "Mail Send" and move the slider over to full access. Then Create the key and copy it. 
+In the code, in appsettings.json and appsettings.development.json, replace the values "API_KEY" and "EmailAddress" with your new API key and your single sender email address.
 
 
 ## Deploying with Docker
