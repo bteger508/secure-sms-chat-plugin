@@ -38,6 +38,8 @@ The Cheetah Panel shows the trust officers the open conversations. In this panel
 
 ### The User Panel
 
+The User Panel is a list of everyone associated with the companies, trust officers and trust owners. In this panel you can see the Id, Username, First Name, Last Name, Phone Number, Account Type, Email, and TenantId. In this window you can add a new Cheetah user, add a new Accunet user, and edit. When editing you can remove users. 
+
 <img src="assets/user-panel.png"></img>
 
 
