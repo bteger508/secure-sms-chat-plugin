@@ -30,6 +30,10 @@ After the client logs in they will be brought to the Accunet panel. This panel a
 
 <img src="assets/empty-accunetpanel.png"></img>
 
+### The Cheetah Panel
+
+<img src="assets/cheetah-panel.png"></img>
+
 ### The User Panel
 
 <img src="assets/user-panel.png"></img>
