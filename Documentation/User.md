@@ -14,29 +14,17 @@ After registering you are brought to the login page. Here you input your Usernam
 
 ### The Accunet Panel 
 
-After the client logs in they will be brought to the Accunet panel. This panel allows the client to open a live chat, start a new conversation, and sign out. 
+After the investor logs in they will be brought to the Accunet panel, a mostly empty window with the option to create a new conversation. Clicking 'Create New Conversation' takes the user to the chat window. The investor can also start a new conversation, and sign out. The 'Open Live Chat' will open and close the modal window.
 
 <img src="assets/empty-accunetpanel.png"></img>
 
 ### The Accunet Chat Window
 
-Once logged in, trust owners can view a mostly empty window with the option to create a new conversation. Clicking 'Create New Conversation' takes the user to the chat window. The first input field is the subject for the conversation. Once the user enters a subject for the conversation, they can send a message to their trust officer. If you press back, you can see a list of conversations you created. Clicking on any of these will take you to the chat for that conversation.
+When creating a new conversation, the user enters a subject for the conversation, they can send a message to their trust officer. If a subject has not been set 'discard' will route the investor without saving the conversation. If you press back, you can see a list of conversations you created. Clicking on any of these will take you to the chat for that conversation. 
 
 <img src="assets/accunet-chat.png"></img>
 
 <img src="assets/accunet-subject-field.png"></img>
-
-### The Cheetah Chat Window
-
-In this window the trust officers can respond to incoming messages from trust owners. These messages will have a time stamp, the clients name, and the subject of the question. This window offers the ability to go back and sign out. 
-
-<img src="assets/cheetah-chat.png"></img>
-
-### The Admin Panel
-
-In the Admin Panel you can see a chart of the tenants information. This information includes their Tenant Id's, name of their organization (Capital One) for example, and the type (bank) for example. In this panel you can edit the chart, delete a tenant, add a new tenant, and sign out. 
-
-<img src="assets/admin-panel.png"></img>
 
 ### The Cheetah Panel
 
@@ -44,11 +32,25 @@ The Cheetah Panel shows the trust officers the open conversations. In this panel
 
 <img src="assets/cheetah-panel.png"></img>
 
+### The Cheetah Chat Window
+
+In this window the trust officers can respond to incoming messages from trust owners. These messages will have a time stamp, the clients name, and the subject of the question. This window offers the ability to go back and sign out. 
+
+<img src="assets/cheetah-chat.png"></img>
+
 ### The User Panel
 
 The User Panel is a list of everyone associated with the companies, trust officers and trust owners. In this panel you can see the Id, Username, First Name, Last Name, Phone Number, Account Type, Email, and TenantId. In this window you can add a new Cheetah user, add a new Accunet user, and edit. When editing you can remove users. 
 
 <img src="assets/user-panel.png"></img>
+
+### The Admin Panel
+
+In the Admin Panel you can see a chart of the tenants information. This information includes their Tenant Id's, name of their organization (Capital One) for example, and the type (bank) for example. In this panel you can edit the chart, delete a tenant, add a new tenant, and sign out. 
+
+<img src="assets/admin-panel.png"></img>
+
+
 
 
 
