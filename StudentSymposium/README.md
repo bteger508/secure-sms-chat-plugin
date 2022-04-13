@@ -32,6 +32,8 @@
 
 ### Ethan
 
+I showed up to the symposium right before 2pm and was surprised at how few people were walking around. I thought that the event would be much larger. Luckily I still got to tell a handful of people about the project. It was interesting to switch how I talked about the project, since I am so used to talking to developers about it. Explaining it to people who don't code requires a whole different explanation, and I was not as prepared for that as I thought I would be. It was cool to see people excited to try the demo of our project. It was a pretty neat experience, and I wish I would have had time to listen to some of the other projects.
+
 ### Sadie
 
 There were quite a bit of interesting projects, and it was cool to see what other majors are doing. At our stand, we got to talk to many people curious about our project, including Ellen Thorington, who I learned is Renet's wife, so it was really cool to meet her. After Ben and Ethan arrived a took a lap around to look at all the projects. Most of which seemed to fall into the categories of biology, zoology, psychology, and sociology. I beleive there were also a couple of urban planning and at least one museum exhibition planning one. At one point I got into a conversation with someone about project, and while we went on tangents it lasted for at least half an hour. I'm personally not great at presentations and socializing with a lot of new people, but it honeslty wasn't as bad as I thought it was going to be.
