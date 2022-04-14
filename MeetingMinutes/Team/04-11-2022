@@ -1,0 +1,35 @@
+# Week of 04-11-2022 / 04-17-2022
+
+## Meeting Start Time
+
+04-11-2022 hh: 5:30PM
+
+## Meeting End Time
+
+04-04-2022/hh: 11:45PM
+
+## Location/Medium
+
+Zoom
+
+## Present
+
+Nicole, Ben, Ethan, Sadie
+
+## Minute Recorder
+
+Nicole
+
+## Topics Discussed
+
+What still needs finished before turning in documentaiton and final iteration
+Encryption is not going to work unless we updated to .Net Core 5 and above
+
+
+## Things Clarified
+Ben worked on testing and development.md
+Sadie worked on frontend things
+Ethan worked on email/sms alert and development.md
+Nicole worked on encryption but the team decided against it because updating .NET core would cause more work, 
+also worked on the iteration powerpoint and user.md documentation
+
