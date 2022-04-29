@@ -1,4 +1,4 @@
-# ChatBot Directory
+# An Overview of the Code/Modules
 
 This directory aims to be as self contained as possible for all of the code related to the chatbot. The entrypoint for the code is the `Accubot` class, which uses the `PredictIntent` and `GenerateResponse` methods to predict the intent of a user's message and use the prediction to generate a reply.
 
